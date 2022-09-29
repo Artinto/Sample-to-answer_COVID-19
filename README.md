@@ -54,8 +54,7 @@ $ pip install -r requirements.txt
 <br>
 
 ## III. Crop the smartphone image using YOLOv3
-In this process, You can see the cropped image. Actually, cropped data is directly passed to classifier(ResNet18). But this code consist 2-stages to show the intermediate processes. **Images are 100 each class in 'yolo/images/' folder.** 
-We used more data in the paper. If you need, download this [link](https://drive.google.com/file/d/1wq5-V3CD3OE3TdBWT1oZ15-qrFHPJqlD/view?usp=sharing). 
+100 test sample images for each class are provided in 'yolo/images/' folder. If you need more test samples, please download through this [link](https://drive.google.com/file/d/1wq5-V3CD3OE3TdBWT1oZ15-qrFHPJqlD/view?usp=sharing). 
 	
 ```bash
 $ cd yolo
@@ -67,7 +66,9 @@ $ python crop.py        (this command takes a few minutes)
 <br>
 
 ## IV. Classify negative/positive cropped images using ResNet18
-You can see the classification result for the each 'yolo/result/' image.
+You can see the classification result. 
+(input: the cropped images in 'yolo/result/')
+
 
 ```bash
 $ cd ../classification/
@@ -79,7 +80,7 @@ $ python test.py
 <br>
 
 ## V. Concentration Regression using ResNet50
-You need to check the trend with increasing concentration. The higher the density, the higher the number. The x-axis represents the correct answer and the y-axis represents the predicted value.
+The result is provided as a plot image. The higher the number, the higher the concentration is. The x-axis represents the ground truth and the y-axis represents the predicted value.
 
 ```bash
 $ cd ../regression/
@@ -91,7 +92,7 @@ $ python test.py
 <br>
 
 ## VI. Pipeline mode (Additional)
-In this mode, You can only view the results without saving any images. Cropped images from YOLO are send directly to ResNet. Total Accuracy is printed on Terminal, detailed result is saved on 'classfication/result/matrix.txt'.
+In this mode, you can check the final result without saving any images. The cropped images from Yolov3 are directly sent to ResNet. The brief summary about accuracy is printed on the console screen and the corresponding confusion matrix is written in 'classfication/result/matrix.txt'.
 
 ```bash
 $ cd ../yolo/
