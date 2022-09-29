@@ -15,7 +15,7 @@ $ git config --global user.email <user_email>
 ### 2. Clone this Repository on your local path
 ```bash
 $ cd <your_path>
-$ git clone https://github.com/Artinto/Diagnosis_Kit
+$ git clone https://github.com/Artinto/Sample-to-answer_COVID-19
 ```
 
 <br>
