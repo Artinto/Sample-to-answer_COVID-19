@@ -1,20 +1,18 @@
-This is a guide of this code. If you follow this guide, you can see what results are coming out of code and data.
+This is a guide of this code. Please follow the next steps.
 
 
 I. Enviroment setting
-   *Python 3.8 and Ubuntu 16.04 are required*
+   *Python 3.8 and Ubuntu 16.04 are required*   
 
-   1) Right-click on the folder you want and open Terminal.
-   
-
-   2) Unzip the zip file. (Type the text below on Terminal.)
+   1) Unzip the zip file. (Type the text below on Terminal.)
 
 	$ unzip covid_with_DL.zip
 
+   2) Change directory to the unzipped folder
 
    3) Create the virtual enviroment (optional)
         
-      - install virtualenv
+      - Install virtualenv
 
 	$ sudo apt-get install virtualenv
 
@@ -37,26 +35,27 @@ I. Enviroment setting
 
 
 
-II. Download Weight file (Please download right directory)
+II. Downloading Weight files to the following destinations
       
       - yolo/weights/yolov3_tline.weights
 
-	(https://drive.google.com/file/d/1QTrlcYSU8M6GGecWqhspaNu0iBD9__RJ/view?usp=sharing)
+(https://drive.google.com/file/d/1QTrlcYSU8M6GGecWqhspaNu0iBD9__RJ/view?usp=sharing)
 
 
       - classification/weights/bce_weight.pth
 
-	(https://drive.google.com/file/d/1L7DCQpbuqNUR-hDSy4NdsYtFJbCJj1m-/view?usp=sharing)
+(https://drive.google.com/file/d/1L7DCQpbuqNUR-hDSy4NdsYtFJbCJj1m-/view?usp=sharing)
 
 
       - regression/weights/reg_weight.pth
 
-	(https://drive.google.com/file/d/1uXvbIWH51fu283BL7TUqmzuJOtjSvZ8l/view?usp=sharing)
+(https://drive.google.com/file/d/1uXvbIWH51fu283BL7TUqmzuJOtjSvZ8l/view?usp=sharing)
 
 
 
-III. Crop the smartphone image using YOLOv3
-      In this process, You can see the cropped image. Actually, cropped data is directly passed to classifier(ResNet18). But this code consist 2-stages to show the intermediate processes. Images are 100 each class in 'yolo/images/' folder. We used more data in the paper. If you need, download this link. (https://drive.google.com/file/d/1wq5-V3CD3OE3TdBWT1oZ15-qrFHPJqlD/view?usp=sharing)
+III. Cropping the smartphone image through YOLOv3
+      100 test sample images for each class are provided in 'yolo/images/' folder. If you need more test samples, please download through this link. (https://drive.google.com/file/d/1wq5-V3CD3OE3TdBWT1oZ15-qrFHPJqlD/view?usp=sharing)
+
 	
 
 	(venv_name) $ cd yolo
@@ -67,8 +66,9 @@ III. Crop the smartphone image using YOLOv3
 
 
 
-IV. Classify negative/positive cropped images using ResNet18
-	You can see the classification result for the each image in 'yolo/result/'. 
+IV. Classification (negative/positive) of the cropped images through ResNet18
+	You can see the classification result.
+	(input: the cropped images in 'yolo/result/')
 	
 	(venv_name) $ cd ../classification/
 
@@ -79,7 +79,7 @@ IV. Classify negative/positive cropped images using ResNet18
 
 
 V. Concentration Regression using ResNet50
-	You need to check the trend with increasing concentration. The higher the density, the higher the number. The x-axis represents the correct answer and the y-axis represents the predicted value.
+	The result is provided as a plot image. The higher the number, the higher the concentration is. The x-axis represents the ground truth and the y-axis represents the predicted value.
 
 	(venv_name) $ cd ../regression/
 
@@ -90,7 +90,7 @@ V. Concentration Regression using ResNet50
 
 
 VI. Pipeline mode (Additional)
-	In this mode, You can only view the results without saving any images. Cropped images from YOLO are send directly to ResNet. Total Accuracy is printed on Terminal, detailed result is saved on 'classfication/result/matrix.txt'.
+	In this mode, you can check the final result without saving any images. The cropped images from Yolov3 are directly sent to ResNet. The brief summary about accuracy is printed on the console screen and the corresponding confusion matrix is written in 'classfication/result/matrix.txt'.
 
 	(venv_name) $ cd ../yolo/
 
