@@ -2,6 +2,7 @@
 ## I. Enviroment setting
 #### ✔ Python 3.8 and Ubuntu 16.04 are required
 #### ✔ If you download .zip file, Please refer to README.txt
+#### ✔ [Guide video](https://youtu.be/QGGCCM5n83M) is also provided.
 ### 1. git install
 ```bash
 $ sudo apt-get install git
