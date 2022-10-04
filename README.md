@@ -1,8 +1,9 @@
 ## Sample-to-answer Platform for the Clinical Evaluation of COVID-19 using a Deep-learning-assisted Smartphone-based Assay
-## I. Enviroment setting
 #### ✔ Python 3.8 and Ubuntu 16.04 are required
 #### ✔ If you download .zip file, Please refer to README.txt
 #### ✔ [Guide video](https://youtu.be/QGGCCM5n83M) is also provided.
+#### ✔ If you have any issues, please pull request.
+## I. Enviroment setting
 ### 1. git install
 ```bash
 $ sudo apt-get install git
