@@ -54,6 +54,10 @@ $ pip install -r requirements.txt
 
 - regression/weights/[reg_weight.pth](https://drive.google.com/file/d/1uXvbIWH51fu283BL7TUqmzuJOtjSvZ8l/view?usp=sharing)
 
+### Aditional (using another company's kit as a validation set)
+- classification/weights/[bce_weight_for_experts.pth](https://drive.google.com/file/d/1UXUOtKzNNrRE6PUSbNWBw58t3lZNfdm8/view?usp=share_link)
+- classification/weights/[bce_weight_for_ordinary_people.pth](https://drive.google.com/file/d/1_RqDNzHGp1d6HwW4l5hb4nPixZuXrDwP/view?usp=share_link)
+
 <br>
 
 ## III. Crop the smartphone image using YOLOv3
