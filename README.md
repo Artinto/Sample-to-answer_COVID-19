@@ -52,8 +52,6 @@ $ pip install -r requirements.txt
 
 - classification/weights/[bce_weight.pth](https://drive.google.com/file/d/1L7DCQpbuqNUR-hDSy4NdsYtFJbCJj1m-/view?usp=sharing)
 
-- regression/weights/[reg_weight.pth](https://drive.google.com/file/d/1uXvbIWH51fu283BL7TUqmzuJOtjSvZ8l/view?usp=sharing)
-
 ### Aditional (using another company's kit as a validation set)
 - classification/weights/[bce_weight_for_experts.pth](https://drive.google.com/file/d/1UXUOtKzNNrRE6PUSbNWBw58t3lZNfdm8/view?usp=share_link)
 - classification/weights/[bce_weight_for_ordinary_people.pth](https://drive.google.com/file/d/1_RqDNzHGp1d6HwW4l5hb4nPixZuXrDwP/view?usp=share_link)
@@ -86,19 +84,7 @@ $ python test.py
 
 <br>
 
-## V. Concentration Regression using ResNet50
-The result is provided as a plot image. The higher the number, the higher the concentration is. The x-axis represents the ground truth and the y-axis represents the predicted value.
-
-```bash
-$ cd ../regression/
-
-$ python test.py
-```
-**&rarr; Check the 'regression/result/result.png'**
-
-<br>
-
-## VI. Pipeline mode (Additional)
+## V. Pipeline mode (Additional)
 In this mode, you can check the final result without saving any images. The cropped images from Yolov3 are directly sent to ResNet. The brief summary about accuracy is printed on the console screen and the corresponding confusion matrix is written in 'classfication/result/matrix.txt'.
 
 ```bash
