@@ -47,11 +47,6 @@ II. Downloading Weight files to the following destinations
 (https://drive.google.com/file/d/1L7DCQpbuqNUR-hDSy4NdsYtFJbCJj1m-/view?usp=sharing)
 
 
-      - regression/weights/reg_weight.pth
-
-(https://drive.google.com/file/d/1uXvbIWH51fu283BL7TUqmzuJOtjSvZ8l/view?usp=sharing)
-
-
 
 III. Cropping the smartphone image through YOLOv3
       100 test sample images for each class are provided in 'yolo/images/' folder. If you need more test samples, please download through this link. (https://drive.google.com/file/d/1wq5-V3CD3OE3TdBWT1oZ15-qrFHPJqlD/view?usp=sharing)
@@ -78,18 +73,7 @@ IV. Classification (negative/positive) of the cropped images through ResNet18
 
 
 
-V. Concentration Regression using ResNet50
-	The result is provided as a plot image. The higher the number, the higher the concentration is. The x-axis represents the ground truth and the y-axis represents the predicted value.
-
-	(venv_name) $ cd ../regression/
-
-	(venv_name) $ python test.py
-	
-	--> Check the 'regression/result/result.png'
-
-
-
-VI. Pipeline mode (Additional)
+V. Pipeline mode (Additional)
 	In this mode, you can check the final result without saving any images. The cropped images from Yolov3 are directly sent to ResNet. The brief summary about accuracy is printed on the console screen and the corresponding confusion matrix is written in 'classfication/result/matrix.txt'.
 
 	(venv_name) $ cd ../yolo/
